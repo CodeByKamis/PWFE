@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Valores entre 100 e 200</title>
 </head>
 <body>
+
+    <script>
+        let valores = []
+        for (let i = 0; i<=8 ; i++){
+            let valor = parseFloat(prompt("Informe o "+(i+1)+ " valor"));
+            if (valor >100){
+                if(valor<200){
+                    valores.push(valor)
+                }else{
+                    window.alert("Valor inválido")
+                }
+            }else{
+                window.alert("Valor inválido")
+            }
+
+        }
+        document.write("Valores armazenados: "+valores)
+
+
+    </script>
     
 </body>
 </html>

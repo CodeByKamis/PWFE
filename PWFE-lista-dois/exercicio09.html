@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetor A, Vetor B, Vetor C</title>
+</head>
+<body>
+    <script>
+        let vetorA =[]
+        let vetorB =[]
+        let vetorC =[]
+
+        for (let i = 0; i < 5; i++) {
+            let valorA = prompt(`Digite número para o vetor A:`);
+            vetorA.push(valorA);
+        }
+
+        for (let i = 0; i < 5; i++) {
+            let valorB = prompt(`Digite número para o vetor B:`);
+            vetorB.push(valorB);
+        }
+
+        for (let i = 0; i < 5; i++) {
+            vetorC.push(vetorA[i]);
+            vetorC.push(vetorB[i]);
+        }
+
+        document.write(`Vetor A: ${vetorA.join(", ")} <br>`);
+        document.write(`Vetor B: ${vetorB.join(", ")} <br>`);
+        document.write(`Vetor C: ${vetorC.join(", ")} <br>`);
+        document.write(`TAMBÉM NÃO CONSEGUI FAZER O NÚMERO AQUI SER TUDO INTEIRO`)
+    </script>
+</body>
+</html>

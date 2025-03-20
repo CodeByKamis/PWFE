@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Nomes</title>
+</head>
+<body>
+    <script>
+        let nomesCadastrados = ["Kamila", "Francisca", "Leticia", "Ana", "Luana", "Giovana", "Bruno", "Raphaela", "Adrian", "Kauan"]
+
+        let novoNome = prompt("Digite um nome: ")
+        let indice = nomesCadastrados.indexOf(novoNome);
+        if (indice!== -1){
+            document.write(`Esse nome está cadastrado na posição ${indice}`)
+        }else{
+            document.write(`Nome não encontrado!`)
+        }
+    </script>
+</body>
+</html>
