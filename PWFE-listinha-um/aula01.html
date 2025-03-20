@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Aula de FrontEnd!</h1>
+    <script>
+        //alart - exibe recados para meu querido usuario,onde ele so pode clicar em ok
+        //resumindo quem manda sou eu
+        window.alert("Olá Mundo, estamos quebrando uma maldição");
+        alert("Já estava com saudades de vocês!")
+
+        //prompt - é o input do javascript, sevre para obter respostas do meu querido usuário
+
+        //let: valores que podem ser adquiridas dos usuarios durante o uso da aplicação
+        //cont: valores imutaveis (crachados)
+        //var: é a forma legeada de declarar variaveis, podem ainda visto em sistemas legados
+
+        let mat = window.prompt("Qual sua matéria favorita?"); //let é onde você guarda a variavel
+        document.write(`Então quer dizer que sua matéria favorita é ${mat}`);//o $ é como se fosse o f do python para trazer a variavel
+        //confirm - serve para permitir escolha 
+        window.confirm("Você já está preparado para a festa de comemoração por vocês passarem do termo");
+
+        let nota1 = Number(prompt("Digite a sua nota 1: "));
+        let nota2 = Number(prompt("Digite sua nota 2: "));
+        let media = (nota1 + nota2)/2;
+        document.write(`A sua média é: ${media} </br>`);
+        //inserção de considionais
+        if(media >= 5){
+            alert("Aprovado");
+        }
+        else{
+            alert("Reprovado");
+        }
+        console.log(media) //ele mostra no espencionar o que essa variavel media está guardando nela.
+
+        //LAÇO DE REPETIÇÃO
+
+        //for - Normalmente sei quantas interações eu faço
+        for (let a = 100;a>50;a--){
+            document.write(`O número agora é ${a} <br>`);
+        }
+        
+        //while - necessito d euma consição, faço enquanto for correspondente a codinção
+        contador = 0
+        while (contador <= 100){
+            document.write(`O número é ${contador} <br>`);
+            contador = contador + 10;
+        }
+        //do while - executa pelo menos uma vez e ao final verifica a condição 
+        let i = 1;
+        do {
+            if (i % 2 == 0){
+                document.write(`<br> O número ${i} é par <br>`);
+            }else{
+                document.write(`<br> O número ${i} é ímpar <br>`);
+            }
+            i++
+        }while(i <=20);
+
+        //Múltiploa escolha- *swith case* - ele serve  mediante a condição
+        let opcoes = Number (prompt("Digite a opção: 1 - soma, 2 - Subtração, 3 - Multiplição, 4 - Divisão;"));
+        let valor1 = Number(prompt("Informe um valor: "));
+        let valor2 = Number(prompt("Informe um valor: "));
+
+        switch(opcoes){
+            case 1:
+                soma = valor1 + valor2;
+                document.write(`A soma dos númeoros ${valor1} + ${valor2} é = ${soma}`);
+                break;
+            case 2:
+                subtracao = valor1 - valor2;
+                document.write(`A subtração dos númeoros ${valor1} - ${valor2} é = ${subtracao}`);
+                break;
+
+            case 3:
+                multiplicacao = valor1 * valor2;
+                document.write(`A multiplicação dos númeoros ${valor1} x ${valor2} é = ${multiplicacao}`);
+                break;
+
+            case 4:
+                divisao = valor1 / valor2;
+                document.write(`A divisão dos númeoros ${valor1} / ${valor2} é = ${divisao}`);
+                break;
+            default:
+                document.write("Valor inválido");
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

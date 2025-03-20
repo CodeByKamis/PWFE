@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 12 - Cálculo Fatorial</title>
+</head>
+<body>
+
+    <h2>Calcular o Fatorial</h2>
+    <p>Digite um número para calcular o seu fatorial:</p>
+    <input type="number" id="numero">
+    <button onclick="fatorial()">Calcular</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function fatorial() {
+            var numero = parseInt(document.getElementById("numero").value);
+            var resultado = 1;
+
+            if (numero < 1) {
+                window.alert("Por favor, insira um número maior ou igual a 1.");
+            }
+
+            for (var i = 1; i <= numero; i++) {
+                resultado *= i;
+            }
+
+            document.getElementById("resultado").innerHTML = "O fatorial do número " + numero + " é: " + resultado;
+        }
+    </script>
+
+</body>
+</html>
