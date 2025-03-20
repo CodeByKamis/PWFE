@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Aritmética</title>
+</head>
+<body>
+    <h1>Média Aritmética</h1>
+
+    <script>
+        let numeros = [1, 10, 5, 9, 5, 7, 2, 6];
+    
+        for (let numerozinho in numeros) {
+            document.write(`Número: ${numeros[numerozinho]}<p>`);
+        }
+    
+        let calculo = 0;
+    
+        for (let numero of numeros) {
+            calculo += numero;
+        }
+    
+        calculo = calculo / numeros.length;
+    
+        document.write(`A média aritmética é igual a: ${calculo}`);
+    </script>
+    
+</body>
+</html>

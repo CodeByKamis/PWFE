@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números pares</title>
+</head>
+<body>
+    
+    <script>
+        let valores = [1,7,9,5]
+        parzinho = false
+        par = []
+        for (valor of valores){
+            if (valor %2 ===0){
+                parzinho = true
+                par.push(valor)
+            }
+
+        }
+        if (parzinho){
+            document.write(`números pares: ${par} <p>`)
+
+        }else if (!parzinho){
+            document.write(`Todos os números são ímpares`)
+        }
+
+
+    
+        
+
+
+    </script>
+
+</body>
+</html>
