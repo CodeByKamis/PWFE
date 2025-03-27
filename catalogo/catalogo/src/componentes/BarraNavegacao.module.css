@@ -1,0 +1,35 @@
+
+.conteiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 15px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+
+
+}
+
+ul{
+    width: 100%;
+    background: rgb(247,255,202);
+    background: linear-gradient(90deg, rgba(247,255,202,1) 0%, rgba(238,241,222,1) 47%, rgba(247,255,202,1) 100%);
+    list-style: none;
+    padding: 0px;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+li{
+    margin-left: 30px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-family:cursive;
+    
+}
+a{
+    text-decoration: none;
+}
