@@ -1,0 +1,16 @@
+.conteiner{
+    position: relative;
+    width: 280px;
+    margin: 30px;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+    background-color:#ffffff;
+    color: aliceblue;
+        
+}
+
+figure{
+    display: flex;
+    flex-wrap: wrap;
+}

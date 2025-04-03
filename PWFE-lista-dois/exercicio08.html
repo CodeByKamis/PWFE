@@ -8,16 +8,23 @@
 <body>
 
     <script>
-        vetorA=[]
-        vetorB=[]
+        let vetorA=[]
+        let vetorB=[]
 
         for (let i =0; i<=6; i++){
-            let valor = prompt(`Digite um valor: `);
-        
+            let valor = Number (prompt(`Digite um valor: `));
 
-            vetorA.push(valor)
-            metade = valor /2
-            vetorB.push(metade)
+           
+                vetorA.push(valor)
+                metade = valor /2
+                vetorB.push(metade) 
+
+            if (valor =! parseInt){
+                window.alert("Apenas números inteiros")
+
+            }
+            
+        
         }
         document.write(`Vetor A: ${vetorA.join(", ") } , <br>`)
         document.write(`<br>Vetor B: ${vetorB.join(", ") } , <br>`)

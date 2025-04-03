@@ -4,16 +4,18 @@
     justify-content: center;
     align-items: center;
     padding-bottom: 15px;
-    color: rgb(0, 0, 0);
+    color: #6a5b8f;
     text-decoration: none;
-
+    
 
 }
 
+nav{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5)}
 ul{
     width: 100%;
-    background: rgb(247,255,202);
-    background: linear-gradient(90deg, rgba(247,255,202,1) 0%, rgba(238,241,222,1) 47%, rgba(247,255,202,1) 100%);
+    background: rgb(217,202,255);
+    background: linear-gradient(90deg, rgba(217,202,255,1) 0%, rgba(238,241,222,1) 47%, rgba(217,202,255,1) 100%);
     list-style: none;
     padding: 0px;
     flex-direction: row;
@@ -25,11 +27,16 @@ ul{
 
 li{
     margin-left: 30px;
-    color: rgb(0, 0, 0);
+    color: #6a5b8f;
     text-decoration: none;
     font-family:cursive;
     
 }
 a{
     text-decoration: none;
+}
+
+span{
+    gap: 5px;
+    display:flex;
 }
