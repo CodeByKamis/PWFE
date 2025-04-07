@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra, Papel ou Tesoura</title>
+</head>
+<body>
+
+    <h1>Jogo de Pedra, Papel ou Tesoura</h1>
+    <button onclick="jogo('pedra')">Pedra</button>
+    <button onclick="jogo('papel')">Papel</button>
+    <button onclick="jogo('tesoura')">Tesoura</button>
+
+    <p id="mostrar"></p>
+
+    <script>
+        function jogo(escolha) {
+            var opcoes = ['pedra', 'papel', 'tesoura'];
+            var escolhaAutomatico = opcoes[Math.floor(Math.random() * 3)];
+            var resultado = "";
+
+            if (escolha === escolhaAutomatico) {
+                resultado = "Que pena, deu empate -_- Você e o computadsor escolheram " + escolhaAutomatico;
+            } else if (
+                (escolha === 'pedra' && escolhaAutomatico === 'tesoura') ||
+                (escolha === 'papel' && escolhaAutomatico === 'pedra') ||
+                (escolha === 'tesoura' && escolhaAutomatico === 'papel')
+            ) {
+                resultado = "EBAAA você ganhou :D Você escolheu " + escolha + " e o computador escolheu " + escolhaAutomatico;
+            } else {
+                resultado = "AFSS você perdeu ;( Você escolheu " + escolha + " e o computador escolheu " + escolhaAutomatico;
+            }
+
+            document.getElementById('mostrar').innerHTML = resultado;
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,180 @@
+/* codigo inicial -> reutilizado em toda a página */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box
+}
+
+body {
+    font-family: 'Jaldi', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+
+
+/* estilização do cabeçalho - foi reutilizado em todas as páginas */
+header {
+    background-color: white;
+    padding: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+}
+.cabecalho{
+    text-align: center;
+
+}
+
+.cabecalho a{
+    text-decoration: none;
+    color: black;
+}
+
+
+
+/* primeira parte do main */
+.cumprimento {
+    font-weight: bold;
+    margin-top: 120px;
+    margin-left: 25%;
+    margin-bottom: 100px;
+}
+
+.text-med{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+.text-big{
+    font-size: 32px;
+    width: 35%;
+    margin-bottom: 20x;
+}
+
+/* imagens github e linkedin */
+.img-link {
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.img-link img {
+    border: none;
+    outline: none;
+    width: 40px;
+    margin: 5px;
+}
+
+.img-link a{
+    text-decoration: none;
+}
+
+
+
+
+/* main parte sobre mim */
+.sobremim {
+    margin-top: 3%;
+    display: flex;
+    margin-left: 25%;
+}
+
+.title-sobremim {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 4%;
+}
+
+.text-sobremim {
+    font-size: 24px;
+    max-width: 570px;
+}
+
+.img-sobremim {
+    flex-shrink: 0;
+    margin-left: 5%;
+}
+
+.imgsobremim {
+    width: 300px;
+    height: auto;
+    border-radius: 3px;
+}
+
+
+
+
+
+/* main parte sobre tecnologias */
+.tecnologias {
+    margin-top: 90px;
+}
+
+.tecnologias p {
+    margin-left: 25%;
+    margin-bottom: 2%;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.img-tecnologias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px; 
+}
+
+.img-tecnologias img {
+    width: 120px;
+    height: auto;
+}
+
+
+
+
+
+/* main parte sobre atividades realizadas */
+/* essa parte foi reutilizada nas páginas de atividades */
+.title-atividades{
+    margin-left: 25%;
+    margin-bottom: 2%;
+    font-size: 36px;
+    font-weight: bold;
+
+}
+
+.atividades-realizadas {
+    margin-top: 90px;
+}
+
+
+.primeira-secao {
+    display: flex;
+    justify-content: center;
+    gap: 4%;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-bottom: 70px;
+}
+
+.primeira-secao img{
+    width: 200px;
+
+}
+
+
+
+
+/* footer -> foi reutilizado em todas as páginas*/
+footer {
+    background-color: black;
+    color: #fff;
+    padding: 20px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.final-footer p{
+    text-align: center;
+
+}

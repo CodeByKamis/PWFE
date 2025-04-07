@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Nomes e chances</title>
+</head>
+<body>
+    <script>
+        //lista dos nomes
+        let nomesCadastrados = ["Kamila", "Francisca", "Leticia", "Ana", "Luana", "Giovana", "Bruno", "Raphaela", "Adrian", "Kauan"];
+        let nomeEncontrado = false;
+
+        for(let chance = 1; chance <=5; chance++ ){//iniciando o for
+            
+            let novoNome = prompt(`Tentativa ${chance}\n Digite um nome: `);//input da tentativa
+            let indice = nomesCadastrados.indexOf(novoNome);
+
+            if (indice !== -1){//se esse nome estiver em algum index ou seja, do zero em diante, ele existe
+                document.write(`Esse nome está cadastrado na posição ${indice}, você acertou na sua chance: ${chance}` );
+                nomeEncontrado = true;//então a variável declarada se torna verdadeira
+                break;
+
+            }else{//se não estiver em nenhum indice a partir de zero, ele não existe
+                window.alert(`Esse nome não está na lista.`);
+            }
+            
+        }
+        
+    </script>
+</body>
+</html>

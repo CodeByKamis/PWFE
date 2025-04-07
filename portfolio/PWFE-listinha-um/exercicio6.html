@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota do aluno</title>
+</head>
+<body>
+    <script>
+        window.alert("Vamos descobrir se você é um bom aluno -_-'");//exibindo um alerta
+        let nota1 = Number(prompt("Digite a sua primeira anota: "));//input da primeira nota
+        let nota2 = Number(prompt("Digite a sua segunda nota: "));//input da segunda nota
+        let calculo = (nota1 + nota2)/2;//iniciando a variavel calculo somando as duas notas e dividindo o resultado por 2
+        if (calculo >8){//analisando caso a nota seja maior que 8
+            document.write(`Você é um aluno acima da média, sua média é ${calculo} *-*<br>`);//se calculo for >8 exiba isso na tela do usuario 
+            if (calculo %2 == 0){//analisando a curiosidade
+                document.write(`Sua media é par (Curiosidade apenas)`);//se a media for par exibir isso ma tela do usuário
+            }else{
+                document.write("Sua media é ímpar (Curiosidade apenas)");//se a media for ímpar, exibir isso na tela do usuario
+            }
+        }else{//se o aluno não acima da média:
+            document.write(`Você não é um aluno acima da média, sua média é ${calculo} MELHORE >:C<br>`);//exibir isso na tela do usuário
+            if (calculo %2 ==0){//analisando a curiosidade
+                document.write(`Sua media é par (Curiosidade apenas). E FALANDO NA SUA MEDIA, MELHORE ELA!`);//se a media for par exibir isso ma tela do usuário
+            }else{
+                document.write(`Sua media é ímpar (Curiosidade apenas). E FALANDO NA SUA MEDIA, MELHORE ELA!`);//se a media for ímpar, exibir isso na tela do usuario
+            }
+        }
+    </script>
+</body>
+</html>

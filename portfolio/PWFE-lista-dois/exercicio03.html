@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idades Acima da Média</title>
+</head>
+<body>
+    <h1>Idades</h1>
+    <button onclick="verIdades()">Ver Idades</button>
+    <p id="Resposta"></p>
+
+    <script>
+        //inicializado uma função
+        function verIdades() {
+            let idades = [];//variavel de idade
+            let soma = 0;//variavel para soma
+
+            for (let i = 0; i < 20; i++) {
+                let idade = parseInt(prompt("Informe a idade da pessoa " + (i + 1)+ ":"));//input da idade
+                idades.push(idade); //vai guardar a idade recebida no input
+                soma += idade; //é somado a idade na variavel soma
+            }
+
+            let media = soma / 20; //calcular a media: o valor total dividido pelo numero de pessoas que falaram as suas idades
+
+            let maiorMedia = idades.filter(idade => idade > media);//calcula as idades que estão acima da média
+            let resposta = document.getElementById("Resposta");
+            resposta.innerHTML = "Essas são as idades que estão acima da média: " + maiorMedia.join(", ");//mensagem printada na tela do usuário
+        }
+    </script>
+</body>
+</html>

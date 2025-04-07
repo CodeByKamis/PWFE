@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetor A e Vetor B</title>
+</head>
+<body>
+
+    <script>
+        // criando os vetores que irão guardar os números
+        let vetorA=[];
+        let vetorB=[];
+        // for que percorrerá 6x o input pedindo 6 numeros
+        for (let i =0; i<6; i++){
+            let valor = (prompt(`Digite um valor: `));
+            // tratativa de numeros decimais
+            if (!Number.isInteger(Number(valor))){
+                alert("DIgite apenas números inteiro")
+                i--;//caso o numero inserido seja decimal, o codigo exibe o aviso e desconsidera aquele input
+                continue
+            }
+            //garantindo que o numero de valor seja inteiro
+            valor = parseInt(valor)
+            vetorA.push(valor)//puxando o numero de valor para dentro do vetorA
+            let metade = Math.floor(valor /2)//calculando o valor da metade
+            vetorB.push(metade)//guardando a metade dentro do vetorB
+        }
+        //exibindo todos os números armazenados dentro dos dois vetores
+        document.write(`Vetor A: ${vetorA.join(", ")} <br>`);
+        document.write(`Vetor B: ${vetorB.join(", ")} <br>`);
+    </script>
+    
+</body>
+</html>

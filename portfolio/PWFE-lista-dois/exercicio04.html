@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números pares</title>
+</head>
+<body>
+    
+    <script>
+        let numeros =[];
+        par = false;
+
+        for (let i = 0; i <= 10; i++) {
+                let valor = parseInt(prompt("Informe um número: "));//input do numero
+
+                if (valor %2 ==0){
+                    par = true;//faz a variavel passar a ser true
+                    numeros.push(valor);//se for par adicionar à lista
+                }else{
+                    continue;
+                }
+            }
+
+            if (par == false){//é verificado se todos os números são impares
+                document.write("Todos os números são ímpares");//se todos forem impares, exibe essa mensagem em tela
+            }else{
+                document.write(`Lista de números pares: ${numeros}`);// se não forem todos os numeros impares, é exibido em tela os pares
+            }
+    </script>
+
+</body>
+</html>

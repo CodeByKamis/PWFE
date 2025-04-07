@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora usando Arrow Function</title>
+</head>
+<body>
+    <script>
+        //criando as opções de conta
+        const somar = (a, b) => a + b;
+        const subtrair = (a, b) => a - b;
+        const multiplicar = (a, b) => a * b;
+        const dividir = (a, b) => b !== 0 ? a / b : 'Erro: divisão por zero';
+
+        // operações disponiveis
+        const calcular = (operacao, a, b) => {
+            switch (operacao) {
+                case '+': return somar(a, b);
+                case '-': return subtrair(a, b);
+                case '*': return multiplicar(a, b);
+                case '/': return dividir(a, b);
+            }
+        };
+        //PEDINDO A OPERAÇÃO
+        let calculo = prompt("Qual operação você deseja realizar:");
+        calculo = calculo.toLowerCase();
+        //input dos dois valores
+        let a = Number(prompt("Digite o primeiro número:"));
+        let b = Number(prompt("Digite o segundo número:"));
+        let resultado;
+        //resolvendo a questão de acordo com o tipo de operação que foi escolhido pelo usuário
+        if (calculo === "divisao" || calculo === "divisão") {
+            resultado = calcular('/', a, b);
+        } else if (calculo === "soma") {
+            resultado = calcular('+', a, b);
+        } else if (calculo === "subtração" || calculo === "subtracao") {
+            resultado = calcular('-', a, b);
+        } else if (calculo === "multiplicação" || calculo === "multiplicacao") {
+            resultado = calcular('*', a, b);
+        }
+        //exibindo para o usuário o resultado da conta
+        document.write(`Valor final da conta: ${resultado}`);
+    </script>
+</body>
+</html>

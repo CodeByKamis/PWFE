@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valores entre 100 e 200</title>
+</head>
+<body>
+
+    <script>
+        //iniciado a variavel
+        let valores = [];
+        for (let i = 0; i<=8 ; i++){//iniciado o for
+            let valor = parseFloat(prompt("Informe o "+(i+1)+ " valor"));// pedindo um valor
+            if (valor >100){//se o numero for mais que 100 passa para a próxima etapa
+                if(valor<200){//se o numero for menor que 200 ele é armazenado na variavel "valores"
+                    valores.push(valor);
+                }else{//se o numero for maior que 200 é exibido esse alerta
+                    window.alert("Valor inválido");
+                }
+            }else{//se o número for menor que 100 é exibido esse alerta
+                window.alert("Valor inválido");
+            }
+
+        }
+        document.write("Valores armazenados: "+valores);//no fim do for é exibido todos os núemros armazenados
+
+
+    </script>
+    
+</body>
+</html>

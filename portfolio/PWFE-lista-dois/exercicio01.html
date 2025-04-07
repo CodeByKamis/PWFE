@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lista de números dobrados</h1>
+    <script>
+        //inicializado o array
+        let numeros = [2,4,10,20,26];
+
+        let numerosDobrados = numeros.map (function(numero){
+            //criei uma variavel e chamei o array, map serve p/ percorrer cada item do array, function diz o que fazer com CADA um desses itens
+            return numero *2;//dobrando cada um dos números que foram chamados de dentro do array
+        })
+
+        document.write(`Números originais: ${numeros} <p>`);//exibindo em tela os numeros originais
+
+        document.write(`Números quando dobrados: ${numerosDobrados} <p>`);//exibindo todos os numeros multiplicados
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Múltiplos</title>
+</head>
+<body>
+    <script>
+    
+        let valor1 = Number(prompt("Digite um número: "));//input do primeiro numero
+        let valor2 = Number(prompt("Digite outro valor:"));//input do segundo numero
+        if (valor1 % valor2 == 0){//verificando se o resto da divisão é zero
+            window.alert(`O valor ${valor1} é múltiplo de ${valor2}`);//se o resto for zero
+        }else{
+            window.alert(`O valor ${valor1} não é múltiplo de ${valor2}`);//se o resto não for zero
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxa de Câmbio</title>
+</head>
+<body>
+    <script>
+        window.alert("Vamos ver quanto fica a taxa de câmbio");//alerta exibido na tela do usuário
+        let dolar = Number(prompt("Digite o quanto você deseja em dólar: "));//iniciando a variavel dolar, pedindo o valor que a pessoa deseja em dolar
+        let convertendo = dolar * 5.778; //convertendo o valor desejado pelo valor atual do dolar
+        let taxa = 0.25;//iniciando uma variavel colocando o valor da taxa (deixei como variavel pois o valor da taxa pode mudar)
+        let calculo = convertendo+(convertendo*0.25); //realizando a operação 
+        document.write(`A taxa é de 25%, então o valor para comprar ${dolar} dolares é de R$${calculo}`)//printando o resultado final de quanto vai custar os dolares
+    </script>
+</body>
+</html>

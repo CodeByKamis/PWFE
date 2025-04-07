@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vetor A, Vetor B, Vetor C</title>
+</head>
+<body>
+    <script>
+        //criação dos vetores A,B e C
+        let vetorA =[];
+        let vetorB =[];
+        let vetorC =[];
+
+        for (let i = 0; i < 5; i++) {
+            let valorA = prompt(`Digite número para o vetor A: `);//for para input dos 5 números do vetorA
+            if (!Number.isInteger(Number(valorA))){
+                alert("DIgite apenas números inteiro");
+                i--;//caso o numero inserido seja decimal, o codigo exibe o aviso e desconsidera aquele input
+                continue;
+            }else{
+                vetorA.push(valorA);   //adicionando os números no vetorA caso seja número inteiro 
+            }
+            
+        }
+
+        for (let i = 0; i < 5; i++) {//for para input dos 5 números do vetorB
+            let valorB = prompt(`Digite número para o vetor B:`);
+            if (!Number.isInteger(Number(valorB))){
+                alert("DIgite apenas números inteiro");
+                i--;//caso o numero inserido seja decimal, o codigo exibe o aviso e desconsidera aquele input
+                continue;
+            }else{
+                vetorB.push(valorB);//adicionando os números no vetorB caso seja número inteiro 
+            }
+        }
+
+        for (let i = 0; i < 5; i++) {//aqui é pegado um número de cada um dos vetores de maneira alterada através da posição do index
+            vetorC.push(vetorA[i]);
+            vetorC.push(vetorB[i]);
+        }
+        //printando todos os vetores na tela do usuário
+        document.write(`Vetor A: ${vetorA.join(", ")} <br>`);
+        document.write(`Vetor B: ${vetorB.join(", ")} <br>`);
+        document.write(`Vetor C: ${vetorC.join(", ")} <br>`);
+    </script>
+</body>
+</html>

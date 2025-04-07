@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        const inverter = (str) => str.split('').reverse().join('');
+// split ira separar os elementos, o reverse inverter a ordem e o join juntar tudo d enovo
+
+        const usuario = prompt(`Digite alguma coisa: `);//input do usuário
+        const invertido = inverter(usuario);//chamando a const para inverter a palavra
+        document.write(`Resultado da mensagem/palavra invertida: ${invertido}`);//exibinndo na tela do usuário
+    </script>
+</body>
+</html>

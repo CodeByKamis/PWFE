@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ano Bissexto</title>
+</head>
+<body>
+    <script>
+        window.alert("Vamos descobrir se o ano é bissexto");//alerta exibido na tela do usuário
+        let ano = Number(prompt("Digite ano atual: ")); //iniciando variavel e guardando nela o input do ano
+        if (ano % 4 == 0){//se o resto da divisao de ano dividido por quatro for igual a zero:
+            document.write(`O ano ${ano} é bissexto`);//exibir isso na tela
+        }else{
+            document.write(`O ano ${ano} não é bissexto`);//caso não seja resto zero, exiba isso:
+        }
+    </script>
+</body>
+</html>
