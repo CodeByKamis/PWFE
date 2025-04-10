@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+</head>
+<body>
+
+    <h2>QUERIDOS, SEJAM BEM VINDOS(AS) AO FORMULÁRIO DA KAMIS</h2>
+
+    <!-- fiz um forms para ser preenchido logo na tela mesmo -->
+    <form>
+        <label>Digite o seu Nome: <input type="text" id="nome"></label><br><br>
+
+        <label>Digite o seu Endereço: <input type="text" id="endereco"></label><br><br>
+
+        <label>Qual é o seu Sexo:</label><br>
+        <input type="radio" name="sexo" id="masculino" value="Masculino"> Masculino
+        <input type="radio" name="sexo" id="feminino" value="Feminino"> Feminino<br><br>
+
+        <label>Digite o seu Telefone: <input type="text" id="telefone"></label><br><br>
+
+        <label>Digite o seu número de Celular: <input type="text" id="celular"></label><br><br>
+
+        <label>Digite o seu Email (um bom): <input type="email" id="email"></label><br><br>
+
+        <button type="button" onclick="validarFormulario()">Enviar o Formulário</button>//depois de enviar ele é validado
+    </form>
+
+    <script>
+        //f
+        function validarFormulario() {
+            //getElementById > ele pega o elemento do html atraves do id do elemento
+            const nome = document.getElementById("nome").value.trim();// trim -> tira espaços de antes e depois da palavra
+            const endereco = document.getElementById("endereco").value.trim();
+            const telefone = document.getElementById("telefone").value.trim();
+            const celular = document.getElementById("celular").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const sexoMasculino = document.getElementById("masculino").checked;
+            const sexoFeminino = document.getElementById("feminino").checked;//checked vai ver se algum de,es foi selecionado
+            //caso algum campo esteja vazio, ele vai retornar no alert onde que está vazio, o nome do campo no caso
+            if (nome === "") {
+                alert("Por favor, preencha o campo Nome.");
+                return;
+            }
+            if (endereco === "") {
+                alert("Por favor, preencha o campo Endereço.");
+                return;
+            }
+            if (!sexoMasculino && !sexoFeminino) {
+                alert("Por favor, selecione o Sexo.");
+                return;
+            }
+            if (telefone === "") {
+                alert("Por favor, preencha o campo Telefone.");
+                return;
+            }
+            if (celular === "") {
+                alert("Por favor, preencha o campo Celular.");
+                return;
+            }
+            if (email === "") {
+                alert("Por favor, preencha o campo Email.");
+                return;
+            }
+
+            alert("Nós do SENAI agradecemos por seu empenho da escrita desse formulário! Beijinhos mores, até...");
+        }
+    </script>
+
+</body>
+</html>

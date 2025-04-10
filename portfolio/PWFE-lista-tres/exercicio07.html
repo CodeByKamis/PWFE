@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinheiro</title>
+</head>
+<body>
+    <script>
+        //pede o input do usuario
+        let dinheiro = Number(prompt("Querido usuário, digite um valor em reais que você gostaria: "));
+        
+        
+        //array com as cedulas cadastradas
+        const cedulas = [200, 100, 50, 20, 10, 5, 1];
+        
+        
+        //escrevendo input de quantas cedulas vai precisar
+        document.write(`Para o valor de R$${dinheiro} reais, você vai precisar de: <br>`);
+        //o for percorrendo todas as cedulas, analisando a quantidade do dinheiro para quais cedulas vai precisar usar
+
+        for (let i = 0; i < cedulas.length; i++) {
+            const quantidade = Math.floor(dinheiro / cedulas[i]); // pega o número de cédulas
+            if (quantidade > 0) {//só printa se for mais que zero, se não, ele não printa
+                document.write(`${quantidade} cédula(s) de R$${cedulas[i]}<br>`);
+                dinheiro %= cedulas[i]; //pega o valor, qual cedula atende, depois subtrai pela cedula já pega e vê quanto sobra, faz o mesmo com o valor restante até zerar
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

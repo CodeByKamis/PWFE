@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //criando um array
+        let numeros = [];
+        //pedindo os numeros usando for para clean code
+        for (let i = 0; i<3; i++){
+            let numero = Number(prompt(`Digite um número: `))
+            numeros.push(numero)
+        }
+        //colocando os numeros em ordem crescente
+        numeros.sort((a,b)=> a-b);
+        //printando o texto -> join serve para juntar os elementos de um array em um único texto
+        document.write(`Números organizados em ordem crescente: ${numeros.join(", ")}`)
+    </script>
+    
+</body>
+</html> 

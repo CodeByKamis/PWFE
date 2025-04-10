@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calcular o imposto de renda</title>
+</head>
+<body>
+    <script>
+        let salario_minimo = 1518;//valor do salario minimo
+        //CALCULA A PORCENTAGEM DO IMPORTO COM BASE NO SALARIO
+        let calcularImposto = salario => {
+            if (salario <= 2112) {
+                return 0; // é isento
+            } else if (salario <= 2826.65) {
+                return salario * 0.075;// 7.5%
+            } else if (salario <= 3751.05) {
+                return salario * 0.15;//15%
+            } else if (salario <= 4664.68) {
+                return salario * 0.225;//22.5%
+            } else {
+                return salario * 0.275;//2.75%
+            }
+        };
+
+        let quantidadeSalarios = Number(prompt("Quantos salários mínimos você recebe?"));//input do usuario
+        let salarioTotal = quantidadeSalarios * salario_minimo;//multiplicando para saber o valor do salario
+        let imposto = calcularImposto(salarioTotal);//descobrindo o valor do importo
+        document.write(`Você recebe o equivalente a R$${salarioTotal.toFixed(2)}<br>`);//exibir o resultado para o usuário
+
+        if (imposto === 0) {//se você for insento
+            document.write(`Estoro!! Você é isento de Imposto de Renda.`);
+        } else {//se você pagar imposto
+            document.write(`Imposto de Renda a pagar: R$${imposto.toFixed(2)} 💸`);
+        }
+    </script>
+</body>
+</html>

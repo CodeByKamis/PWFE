@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carteira de motorista</title>
+</head>
+<body>
+    <script>
+        //pedi a idade do usuario
+        let pergunta = Number(prompt("Qual é a sua idade?"));
+        //utilizei um if/else para ver se ele pode ou não tirar sua habilitação de motorista
+        if (pergunta >=18){
+            document.write(`Você pode tirar sua carteira de motorista`);
+        }else if(pergunta <18){
+            document.write(`Infelizmente não será possível ainda, pois você é de menor querido usuario`);
+        };
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juros compostos</title>
+</head>
+<body>
+    <script>
+        // esse arrow vai calcular o montante
+        let calcularJurosCompostos = (capital, taxa, tempo) =>
+            capital * Math.pow((1 + taxa), tempo);
+
+        // input que o usuario da
+        let capital = Number(prompt("Digite o valor inicial (capital):"));
+        let taxa = Number(prompt("Digite a taxa de juros (ex: 5 para 5%):")) / 100;
+        let tempo = Number(prompt("Digite o tempo em meses/anos:"));
+
+        let montante = calcularJurosCompostos(capital, taxa, tempo);
+        let juros = montante - capital;
+
+        // printando na tela do usuário as informações de cima
+        document.write(`Resultado do total da sua capital inicial: R$${capital.toFixed(2)}<br>`);
+        document.write(`Montante final: R$${montante.toFixed(2)}<br>`);
+        document.write(`Resultado do total da sua total de juros ganhos/pagos: R$${juros.toFixed(2)} 💸`);
+
+    </script>
+</body>
+</html>

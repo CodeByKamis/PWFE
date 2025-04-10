@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covertendo horas p/ minutos</title>
+</head>
+<body>
+   <script>
+    //pedindo input
+    let horario = Number(prompt(`Digite as horas: `));
+    //colocando como constante pois uma hora sempre vai ser 60 minuts
+    const minutos = horario * 60;
+
+    //printando a interação e o resultado da conversão
+    document.write("observe a conversão: <br>")
+    document.write(`Querido usuário, ${horario} hora(s) em minutos é igual a: ${minutos} minutos`)
+   </script>
+
+</body>
+</html>

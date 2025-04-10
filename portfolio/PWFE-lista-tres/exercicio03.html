@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imprimento letras do nome</title>
+</head>
+<body>
+    <!-- iniciando o js -->
+    <script>
+        //pedindo o nome do usuário
+        let nome = prompt("Queridíssimo usuário, digite o seu nome:");
+        document.write(`Cada letra:<br>`)
+
+        // imprimento uma letra por linha
+        for (let i = 0; i < nome.length; i++) {
+            document.write(`${nome[i]}<br>`);
+        }
+
+    </script>
+    
+</body>
+</html>

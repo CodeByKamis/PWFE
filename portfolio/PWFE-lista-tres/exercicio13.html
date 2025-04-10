@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financiamento</title>
+</head>
+<body>
+    <script>
+
+        // esse arrow é p/ calculo de parcelas
+        let calcularParcela = (valor, taxa, meses) => {
+                return (valor * (1 + taxa) ** meses * taxa) / ((1 + taxa) ** meses - 1);
+            };
+            //input perguntando ao usuario algumas coias
+        let valor = Number(prompt("Qual é o valor financiado:"));
+        let taxa = Number(prompt("Qual é a taxa de juros mensal (%):")) / 100;
+        let meses = Number(prompt("Quantidade de meses:"));
+            //chamand as coias para dentro de parcela
+        let parcela = calcularParcela(valor, taxa, meses);
+
+        document.write(`A parcela mental é igual a: R$${parcela.toFixed(2)} reais.`);//printando aqui o resultado na tela
+        // toFixed é para formatar um numero em casas decimais
+
+    </script>
+</body>
+</html>
